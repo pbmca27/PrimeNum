@@ -21,7 +21,7 @@ public class TestPrime {
 	
 	//Verify that the list of Prime numbers between two numbers are displayed
 	@Test
-	public void primeRangeValidate() {
+	public void TestPrimeRangeValidate() {
 		actual.addAll(fpn.calcPrime(2, 12));
 		int size=actual.size();
 		int num = 0;	
@@ -40,7 +40,7 @@ public class TestPrime {
 	
 	// Verify that if Start and End numbers are Prime, they are not omitted
 	@Test
-	public void primeStartEndNumValidate() {
+	public void TestPrimeStartEndNumValidate() {
 		int start = 3;
 		int end = 13;
 		actual.addAll(fpn.calcPrime(start, end));
@@ -63,7 +63,7 @@ public class TestPrime {
 	
 	// Input validation - if anything other than Integer is passed as parameter
 	@Test
-	public void isInputInteger() {
+	public void TestIsInputInteger() {
 		assertEquals("Result: ", String.valueOf(fpn.calcPrime(5.46, 14.50)),"[Not an Integer]");
 		assertEquals("Result: ", String.valueOf(fpn.calcPrime("10", 13)),"[Not an Integer]");
 		assertEquals("Result: ", String.valueOf(fpn.calcPrime(0.05, "21.20")),"[Not an Integer]");
@@ -72,7 +72,7 @@ public class TestPrime {
 	
 	// Verify if a number is less than 1
 	@Test
-	public void isNumLessThanOne() {
+	public void TestIsNumLessThanOne() {
 		assertEquals("Result: ", String.valueOf(fpn.calcPrime(0, 5)),"[Number less than 1]");
 		assertEquals("Result: ", String.valueOf(fpn.calcPrime(-1, 12)),"[Number less than 1]");
 		
@@ -80,7 +80,7 @@ public class TestPrime {
 	
 	// Verify if a Prime number is not found in a given range
 	@Test
-	public void primeNotFound() {
+	public void TestPrimeNotFound() {
 		assertEquals("Result: ", String.valueOf(fpn.calcPrime(22, 22)),"[No Prime num found]");
 		assertEquals("Result: ", String.valueOf(fpn.calcPrime(14, 16)),"[No Prime num found]");
 		
@@ -88,7 +88,7 @@ public class TestPrime {
 	
 	// Verify if the Second number is greater than the First
 	@Test
-	public void secondLessThanFirst() {
+	public void TestSecondLessThanFirst() {
 		assertEquals("Result: ", String.valueOf(fpn.calcPrime(9, 5)),"[First num less than Second num]");
 		assertEquals("Result: ", String.valueOf(fpn.calcPrime(14, 1)),"[First num less than Second num]");
 		
