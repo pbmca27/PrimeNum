@@ -51,12 +51,7 @@ public class TestPrime {
 		
 		startNum = Integer.parseInt(actual.get(0));
 		endNum = Integer.parseInt(actual.get(size-1));
-		for(int i = 2; i<=startNum/2; ++i) {
-			if((startNum % i == 0) || (endNum % i == 0))  {
-				break;
-			}
-		}
-		
+
 		assertEquals("Result: ", startNum, start);
 		assertEquals("Result: ", endNum, end);
 	}
